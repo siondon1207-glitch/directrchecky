@@ -1,23 +1,883 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+
+    <!-- JSON-LD Structured Data for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://porter.reliabledone.com/2026-price-guide"
+      },
+      "headline": "포터2 가격 2026년 완전 분석: LPG 터보 및 일렉트릭 트림별 실구매가 및 보조금 비교",
+      "image": [
+        "https://porter.reliabledone.com/images/porter2-cover.jpg"
+      ],
+      "datePublished": "2026-01-10",
+      "dateModified": "2026-08-14",
+      "author": {
+        "@type": "Person",
+        "name": "상용차 금융 경제 정책 분석팀"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "포터2 다이렉트 금융 지원 센터",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://porter.reliabledone.com/logo.png"
+        }
+      },
+      "description": "2026년형 현대 포터2 LPG 터보 및 일렉트릭 트림별 가격 책정 분석, 국고 보조금과 지자체 지원금 수령을 통한 저렴한곳 설계 요령, 그리고 오토리스 장기렌트 비용 계산기를 활용한 견적 비교 가이드를 상세히 제공합니다."
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #1e293b; /* 중후하고 신뢰감 있는 슬레이트 차콜 */
+            --primary-light: #334155;
+            --secondary: #0f766e; /* 경제성을 상징하는 차분한 틸 그린 */
+            --secondary-light: #14b8a6;
+            --accent: #b45309; /* 강조 및 주의를 끄는 브라운 앰버 */
+            --bg-base: #f8fafc; /* 밝고 깨끗한 배경색 */
+            --bg-card: #ffffff;
+            --text-main: #0f172a; /* 높은 시인성을 보장하는 어두운 회색 */
+            --text-sub: #475569; /* 설명문용 부드러운 차콜 */
+            --border-color: #cbd5e1;
+            --font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.9;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            background-color: var(--bg-base);
+            word-break: keep-all;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 5px solid var(--secondary);
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            letter-spacing: -0.05em;
+            color: #ffffff;
+        }
+
+        header p {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        main {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .intro-box {
+            background-color: #f0fdfa;
+            border-left: 6px solid var(--secondary);
+            padding: 25px;
+            border-radius: 4px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .intro-box p {
+            margin: 0;
+            color: var(--secondary);
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        section {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 45px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+        }
+
+        h2 {
+            font-size: 1.7rem;
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 15px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: var(--primary-light);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 22px;
+            text-align: justify;
+            color: var(--text-main);
+        }
+
+        strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Responsive Grid & Table Styles */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 30px 0;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        table th {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 14px 18px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        table td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #e2e8f0;
+            color: var(--text-main);
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Modern Visualization Charts using pure CSS */
+        .chart-container {
+            background-color: #f1f5f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 35px 0;
+        }
+
+        .chart-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .chart-bar-group {
+            margin-bottom: 15px;
+        }
+
+        .chart-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--text-sub);
+        }
+
+        .chart-track {
+            background-color: #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+            height: 24px;
+            display: flex;
+        }
+
+        .chart-fill {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            transition: width 1s ease-in-out;
+        }
+
+        .fill-lpg {
+            background-color: var(--secondary);
+        }
+
+        .fill-ev {
+            background-color: var(--primary-light);
+        }
+
+        /* Interactive Dynamic Calculator Styles */
+        .calculator-card {
+            background-color: #f8fafc;
+            border: 2px solid var(--secondary);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .form-group select, .form-group input {
+            padding: 10px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background-color: #ffffff;
+            color: var(--text-main);
+            outline: none;
+        }
+
+        .form-group select:focus, .form-group input:focus {
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+        }
+
+        .checkbox-group {
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-item input {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .calc-results {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        .result-value {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .result-total {
+            border-top: 2px solid var(--primary);
+            padding-top: 15px;
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .result-total .result-value {
+            color: var(--accent);
+        }
+
+        /* External Authority Links */
+        .link-container {
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .link-item {
+            display: block;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 15px 20px;
+            border-radius: 6px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .link-item:hover {
+            border-color: var(--secondary);
+            background-color: #f0fdfa;
+            color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .link-item:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.85rem;
+            border-top: 4px solid var(--secondary);
+        }
+
+        footer p {
+            text-align: center;
+            margin: 0 0 10px 0;
+            color: #94a3b8;
+        }
+
+        .nav-anchor {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 15px;
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-anchor:hover {
+            background-color: var(--secondary-light);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>2026년형 현대 포터2 가격표 및 상세 사양 비교 분석 가이드</h1>
+        <p>친환경 파워트레인 전면 전환기 맞춤형 선택 전략: LPG 터보 및 일렉트릭 전기트럭의 트림별 실구매가, 국가 지원금 및 금융 요금 분석</p>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <div class="intro-box">
+            <p>본 가이드는 디질 화물차 단종이라는 역사적 패러다임 변화 속에서 소상공인과 자영업자들의 합리적인 경제 활동을 돕기 위해 작성되었습니다. 최신 가격표 분석부터 다양한 세금 혜택 및 금융 솔루션 정보까지 빠짐없이 담았습니다.</p>
+        </div>
+
+        <section>
+            <h2>1. 물류 시장의 세대교체와 2026년형 포터2의 입지</h2>
+            <p>대한민국 도로 위 물류와 유통업의 든든한 등대 역할을 해온 1톤 소형 화물차 시장이 거대한 전환점을 맞이했습니다. 대기환경보전법 제62조에 따른 상용 디젤 경유 차량의 신규 등록 제한 조치로 인해, 수십 년 동안 시장을 지배했던 포터 디젤 모델은 역사 속으로 완전히 사라졌습니다. 이제 시장은 강력한 동력 성능을 겸비한 가스 터보 엔진인 <strong>스마트스트림 LPG 2.5 터보</strong> 모델과 탄소 배출이 없는 친환경 도심형 운송 수단인 <strong>포터2 일렉트릭</strong> 이중 체제로 고착화되었습니다.</p>
+            <p>이와 같은 과도기적 상황에서 소상공인과 중소 사업자들이 직면한 가장 큰 숙제는 바로 <strong>포터2 가격</strong> 대비 비즈니스 운용 효율성을 어떻게 최적화할 것인가 하는 점입니다. 과거 경유 화물차의 높은 연료 효율과 묵직한 가속 토크에 길들여진 예비 오너들은 LPG 및 전기 파워트레인에 대해 다양한 우려를 표하기도 합니다. 그러나 2026년형 포터2 연식 변경 모델은 한층 넓어진 카메라 화각과 자전거 탑승자까지 인식하는 전방 충돌방지 보조, 그리고 전 트림 기본 장착으로 확대된 편의 사양들을 무장하여 이전 세대의 단점들을 대대적으로 불식시키고 있습니다.</p>
+            <p>따라서 차량 도입 시 단순 신차 권장소비자가만을 비교할 것이 아니라, 정부 및 각 지방자치단체의 보조금 지급 현황, 친환경 차량 세제 감면 정책, 그리고 고유가 시대에 대처할 수 있는 실질적인 유류비와 충전 요금 수준을 통찰력 있게 설계하는 과정이 최우선적으로 요구됩니다.</p>
+        </section>
+
+        <section>
+            <h2>2. 2026 포터2 LPG (LPDi) 모델 정밀 분석 및 트림별 가격 책정</h2>
+            <p>LPG 2.5 터보 엔진은 가솔린 직분사 시스템과 유사한 방식을 채용하여 종래 가스차는 힘이 없다는 편견을 완전히 타파하였습니다. 최고 출력 159마력, 최대 토크 30.0kgf.m의 사양을 갖추어 고속도로 주행이나 가파른 고갯길에서도 묵직한 적재 중량을 충분히 견뎌내며 주행합니다.</p>
+            
+            <h3>2.1. 초장축 슈퍼캡 2WD 수동변속기 기준 공식 요금표</h3>
+            <p>2026년형 포터2 LPG 라인업은 상품성 개선과 편의 사양 상향 조정을 거치면서 다음과 같은 트림 체계를 구축했습니다. 수동변속기 기준의 금액이며, 가성비 위주의 스마트 트림부터 편의 기능이 극대화된 프리미엄까지 세분화되어 공급됩니다.</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <caption>2026년형 포터2 LPG 주요 트림별 공식 차량 가격 및 주요 특징</caption>
+                    <thead>
+                        <tr>
+                            <th>트림 명칭</th>
+                            <th>기본 차량 가격 (원)</th>
+                            <th>핵심 기본 품목 및 탑재 편의 사양</th>
+                            <th>주요 타겟 소비자군 추천</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>스마트 (Smart)</strong></td>
+                            <td>21,520,000</td>
+                            <td>스마트스트림 LPG 2.5 터보 엔진, 운전석 및 동승석 에어백, 운전석 통풍시트 및 열선시트, 전동식 럼버서포트, 가죽 스티어링 휠(열선 포함), 전방 충돌방지 보조(자전거 인식 포함), 차로 이탈 경고</td>
+                            <td>적재 운송 기능에 극도로 집중하고, 초기 차량 구입 비용을 제일 저렴하게 낮추고자 하는 실속형 차주</td>
+                        </tr>
+                        <tr>
+                            <td><strong>모던 (Modern)</strong></td>
+                            <td>22,570,000</td>
+                            <td>스마트 트림 사양 기본 포함, 8인치 디스플레이 오디오, 후방 모니터, 1열 USB 충전 포트, 아웃사이드 미러 방향지시등, 우드 및 메탈 그레인 인테리어</td>
+                            <td>도심 배송 및 일상 주행 비중이 높아 후방 카메라와 기본 멀티미디어 조작 장치가 필수적인 도심형 개인 사업자</td>
+                        </tr>
+                        <tr>
+                            <td><strong>프리미엄 (Premium)</strong></td>
+                            <td>23,800,000</td>
+                            <td>모던 트림 사양 기본 포함, 10.25인치 대형 내비게이션, 무선 내비게이션 업데이트(OTA), 버튼시동 및 스마트키 시스템, 풀오토 에어컨, 하이패스 시스템</td>
+                            <td>차량 내 대기 및 운전 시간이 매우 길어, 승용차 수준의 안락한 공조 장치와 첨단 편의 인포테인먼트가 요구되는 장거리 전문 차주</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>상기 명시된 금액은 가장 널리 출고되는 초장축 슈퍼캡 2WD 모델을 기준으로 산정되었습니다. 운전석 뒷공간이 배제된 일반캡은 적재함이 더 길어지는 대신 차량 기본 요금에서 약 10만 원이 제외되며, 2열 승차 공간이 마련되어 최대 6인이 탑승 가능한 더블캡 모델은 트림별로 약 120만 원에서 130만 원 상당의 자금이 추가로 부과되므로 비즈니스 형태에 걸맞은 적재량과 인원 수용 능력을 꼼꼼히 산출하셔야 합니다.</p>
+        </section>
+
+        <section>
+            <h2>3. 2026 포터2 일렉트릭 (전기 트럭) 가격과 보조금 혜택 구조</h2>
+            <p>친환경 물류 비즈니스의 선봉장인 포터2 일렉트릭은 정숙성과 뛰어난 초기 발진 가속력으로 골목 주행이 많은 택배 종사자들 사이에서 매우 인기를 끌고 있습니다. 특히 60.4kWh 용량의 고안전성 리튬 이온 고전압 배터리를 탑재해 1회 완충 시 복합 기준 217km의 주행 거리를 실현하였으며, 급속 충전 케이블 구조를 전면 개선하여 150kW 충전기 이용 시 배터리 10% 상태에서 80% 충전까지 걸리는 시간을 단 32분으로 극적으로 단축시켰습니다.</p>
+            
+            <h3>3.1. 일렉트릭 2WD 초장축 슈퍼캡 트림별 요금제</h3>
+            <p>전기 트럭은 차량 자체의 원가와 배터리 단가로 인해 기본 출고가가 다소 높게 책정되어 있으나, 국가 및 지자체 지원금 제도를 적극적으로 활용하는 다이렉트 신규 가입을 진행할 경우 실구매 체감 가격은 LPG 모델과 비교해도 대단히 매력적입니다.</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <caption>2026년형 포터2 일렉트릭 트림별 공식 가격표 및 특징</caption>
+                    <thead>
+                        <tr>
+                            <th>세부 트림 명칭</th>
+                            <th>공식 출시 가격 (원)</th>
+                            <th>주요 기본 사양 및 전용 패키지</th>
+                            <th>실구매 예상가 산출 방향</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>스타일 스페셜</strong></td>
+                            <td>43,500,000</td>
+                            <td>135kW 구동 모터, 60.4kWh 고전압 배터리, 회생제동 시스템, 배터리 프로텍터, 후방 주차 거리 경고, 아웃사이드 미러(열선, 전동조절)</td>
+                            <td>지자체 최대 보조금 수령 시 실구매 한도액 2,000만 원대 중반까지 낮추어 가성비 높은 운송 수단 확보 가능</td>
+                        </tr>
+                        <tr>
+                            <td><strong>스마트 스페셜</strong></td>
+                            <td>44,850,000</td>
+                            <td>스타일 스페셜 기본 포함, 운전석 통풍시트, 가죽 스티어링 휠(열선 포함), 전방 충돌방지 보조, 차로 이탈방지 보조, 운전자 주의 경고</td>
+                            <td>안전 사양과 시트 통풍 기능 등 장시간 운행 시 탑승자의 누적 피로도를 현격히 덜어줄 수 있는 합리적 선택지</td>
+                        </tr>
+                        <tr>
+                            <td><strong>프리미엄 스페셜</strong></td>
+                            <td>46,450,000</td>
+                            <td>스마트 스페셜 기본 포함, 10.25인치 내비게이션, 무선 업데이트(OTA), 후방 모니터, 버튼 시동 및 스마트키, 하이패스, 풀오토 에어컨</td>
+                            <td>충전소 길찾기가 용이한 순정 내비게이션과 스마트 보조 주행 기술이 집약되어 고급 상용 트럭 라이프 구현</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>2026년 기준 1톤 전기 화물 트럭에 주어지는 국고 보조금은 9,680,000원으로 고정 고시되어 있습니다. 여기에 더해 사업장 소재지 혹은 주민등록상 거주지에 따라 지급받는 지자체별 지방비 보조금이 더해지는 구조입니다. 대표적인 지역별 추가 지원금 규모를 살펴보면 제주도가 460만 원으로 최고 수준을 달리고 있으며, 서울특별시 340만 원, 부산광역시 320만 원, 대전과 대구 및 울산 등 주요 광역시는 290만 원 선에서 지급되고 있습니다. 따라서 거주지에 따라 최대 1,428만 원의 전체 보조금을 공제받을 경우, 스타일 스페셜 트림은 실제 약 2,900만 원 내외의 실구매 비용으로 신차 인수가 가능해집니다.</p>
+        </section>
+
+        <!-- Dynamic Cost Visualizer (Pure CSS) -->
+        <div class="chart-container">
+            <p class="chart-title">LPG 대 일렉트릭 트림별 실구매 한도 체감 비교 (지원금 최대 수령 기준 예상 수치)</p>
+            
+            <div class="chart-bar-group">
+                <div class="chart-label">LPG 터보 프리미엄 (옵션 제외 순수 차량 가격)</div>
+                <div class="chart-track">
+                    <div class="chart-fill fill-lpg" style="width: 51%;">약 2,380만 원</div>
+                </div>
+            </div>
+            
+            <div class="chart-bar-group">
+                <div class="chart-label">일렉트릭 프리미엄 스페셜 (국고 + 지자체 평균 보조금 차감 시 예상가)</div>
+                <div class="chart-track">
+                    <div class="chart-fill fill-ev" style="width: 71%;">약 3,300만 원</div>
+                </div>
+            </div>
+        </div>
+
+        <section id="cost-calculator">
+            <h2>4. 실시간 포터2 견적 및 금융 상품 다이렉트 계산기</h2>
+            <p>차량 종류, 트림, 선택 옵션을 본인의 상황에 대입하여 실제 구입 및 인도 시점까지 소요되는 예상 취등록세와 부대비용을 정밀하게 연산할 수 있도록 모의 자가 진단 도구를 지원합니다. 할부 금융이나 리스 계약을 기획할 때 유용하게 활용할 수 있습니다.</p>
+            
+            <div class="calculator-card">
+                <div class="calc-grid">
+                    <div>
+                        <div class="form-group">
+                            <label for="fuelType">1. 연료 및 파워트레인 종류 선택</label>
+                            <select id="fuelType" onchange="updateCalculator()">
+                                <option value="LPG">스마트스트림 LPG 2.5 터보 (LPDi)</option>
+                                <option value="EV">포터2 일렉트릭 (순수 전기트럭)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="trim">2. 세부 트림 단계 지정</label>
+                            <select id="trim" onchange="calculatePrice()">
+                                <!-- Dynamically generated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cabType">3. 캐빈 (차체 레이아웃) 구성</label>
+                            <select id="cabType" onchange="calculatePrice()">
+                                <option value="super">초장축 슈퍼캡 (기본값)</option>
+                                <option value="general">초장축 일반캡 (-10만 원)</option>
+                                <option value="double">초장축 더블캡 (+125만 원)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="driveType">4. 구동 방식 (LPG 전용)</label>
+                            <select id="driveType" onchange="calculatePrice()">
+                                <option value="2WD">후륜 2WD (기본값)</option>
+                                <option value="4WD">사륜 4WD (+200만 원, 수동전용)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transmission">5. 트랜스미션 (변속기 타입)</label>
+                            <select id="transmission" onchange="calculatePrice()">
+                                <option value="MT">6단 수동변속기 (기본값)</option>
+                                <option value="AT">5단 자동변속기 (+113만 원)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="subsidyGroup" style="display: none;">
+                            <label for="subsidyRegion">6. 전기차 지자체 거주지 선택 (보조금 계산)</label>
+                            <select id="subsidyRegion" onchange="calculatePrice()">
+                                <option value="seoul">서울특별시 (국고968만 + 지자체340만)</option>
+                                <option value="busan">부산광역시 (국고968만 + 지자체320만)</option>
+                                <option value="jeju">제주특별자치도 (국고968만 + 지자체460만)</option>
+                                <option value="other_met">기타 대도시 광역시 (평균 290만)</option>
+                                <option value="other_prov">기타 일반 도단위 지방 (평균 200만)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-group">
+                            <label>7. 필수 선택 품목 (중복 체크 가능)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item" id="navLabel">
+                                    <input type="checkbox" id="optNav" onchange="calculatePrice()"> 내비게이션 패키지 (+150만 원)
+                                </label>
+                                <label class="checkbox-item" id="ptoLabel">
+                                    <input type="checkbox" id="optPto" onchange="calculatePrice()"> PTO 동력인출장치 (+20만 원, 수동전용)
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="optSpring" onchange="calculatePrice()"> 중량짐용 후륜 판스프링 보강 (+6만 원)
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="optCover" onchange="calculatePrice()"> 플라스틱 적재함 커버 (+63만 원)
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="financeTerm">8. 금융 할부 및 리스 거치 기간</label>
+                            <select id="financeTerm" onchange="calculatePrice()">
+                                <option value="36">36개월 원리금 균등상환</option>
+                                <option value="48">48개월 원리금 균등상환</option>
+                                <option value="60">60개월 원리금 균등상환</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="result-row">
+                        <span class="result-label">선택 트림 기본 가격 :</span>
+                        <span class="result-value" id="resBasePrice">0 원</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">추가 사양 및 옵션 합산액 :</span>
+                        <span class="result-value" id="resOptionCost">0 원</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">정부/지자체 무상 지원금 공제 :</span>
+                        <span class="result-value" id="resSubsidy">0 원</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">화물 상용차 취등록세 (5% 대입) :</span>
+                        <span class="result-value" id="resTax">0 원</span>
+                    </div>
+                    <div class="result-row result-total">
+                        <span class="result-label">최종 예상 인수 금액 (부대비용 포함) :</span>
+                        <span class="result-value" id="resFinal">0 원</span>
+                    </div>
+                    <div class="result-row" style="background-color: #f0fdf4; padding: 15px; border-radius: 6px; margin-top: 15px;">
+                        <span class="result-label" style="color: var(--secondary); font-weight: 700;">월 예상 납부 견적 비용 (연 5.5% 기준) :</span>
+                        <span class="result-value" style="color: var(--secondary); font-size: 1.15rem;" id="resMonthly">0 원</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. 구동 방식 및 적재함 유형에 따른 차이점과 용도 추천</h2>
+            <p>1톤 화물 트럭은 승용 차량과 다른 독창적인 세부 명칭 체계를 취하고 있습니다. 차량 운행 환경과 수송하는 물품의 속성에 맞물리는 최적 사양을 결정하기 위해 아래의 핵심 지식을 사전에 체득하시기 바랍니다.</p>
+            
+            <h3>5.1. 초장축 슈퍼캡 vs 장축 일반캡 vs 더블캡</h3>
+            <p>가장 혼동하기 쉬운 용어가 바로 캡의 모양입니다. 이는 순전히 승차 공간과 적재함 공간의 비율 관계를 지칭합니다.</p>
+            <p>첫째, <strong>초장축 슈퍼캡</strong> 구조는 대한민국 도로에서 가장 흔하게 목격되는 표준형입니다. 운전석 시트 뒷면에 약간의 여유 수납공간(약 30cm)이 존재하여 외투, 중요 서류, 기구 등을 안전하게 보관할 수 있고 장시간 조업 시 의자를 뒤로 젖혀 간이 수면을 취하기에 용이합니다. 그 대신 적재함 길이는 일반캡 대비 아주 소폭 짧아집니다.</p>
+            <p>둘째, <strong>일반캡</strong> 구조는 시트 바로 뒤가 철판 적재함 벽면과 맞닿아 있습니다. 실내 거주 공간은 다소 비좁고 수납력이 부족해져 등받이를 뒤로 젖히기 힘들다는 단점이 제기되나, 그 반대급부로 적재함 공간의 수평 길이가 제일 길어집니다. 파이프나 목재, 긴 건축 자재처럼 규격이 큰 부피 화물을 위주로 운송하는 사업체에 독보적인 추천을 받습니다.</p>
+            <p>셋째, <strong>더블캡</strong> 구조는 2열 공간에 3개의 추가 시트를 매칭하여 총 6인이 무리 없이 이동할 수 있는 미니밴 성격의 트럭입니다. 건설 현장 인부 이송, 조경 전문 업체, 관공서 시설보수용 순위에서 항상 최상단을 기록하나, 적재함 면적이 상당 부분 상쇄되어 중량 화물 수송량은 제일 떨어진다는 차이점을 인지하셔야 합니다.</p>
+
+            <h3>5.2. 특장차 영역의 확장과 활용 비용</h3>
+            <p>차량 출고 후 냉장 및 냉동 탑차, 수동식 혹은 전동식 윙바디, 수화물을 수직으로 내려주는 파워게이트, 쓰레기나 모래를 쏟아붓는 덤프 특장차로 개조하여 등록하는 경우 또한 매우 빈번합니다. 현대차 순정 특장 브랜드 상품으로 일괄 가입하여 탁송료와 사후 관리를 일원화하는 방법이 일반적입니다. 특수 탑차 개조 시 평균적으로 400만 원에서 1,200만 원 상당의 가입 비용이 추가되며, 전기 화물차 기반의 냉동탑차는 하부 고전압 배터리를 전력원으로 직결 구동하기 때문에 효율이 좋은 대신 전기 소모율이 상대적으로 빨라질 수 있다는 점을 주지할 필요가 있습니다.</p>
+        </section>
+
+        <section>
+            <h2>6. 합리적인 차량 획득 방식: 일시불, 할부 금융, 장기렌트, 오토리스</h2>
+            <p>단순 차량 자체 대금을 지불하는 것만으로 신차 거래가 종결되지 않습니다. 개개인의 신용도, 종합소득세 과세 구간, 초기 가용 현금 규모에 맞춰 합리적인 가입 종류를 선정해야 불필요한 이자 유출을 막을 수 있습니다.</p>
+            
+            <h3>6.1. 오토리스와 장기렌트 상품의 법적 차이점</h3>
+            <p>우선 많은 자영업자분들이 간과하는 매우 중요한 법률 상식이 있습니다. 1톤 소형 화물 트럭은 법률상 업무용 소형 화물차로 분류되므로, 일반 승용차와 달리 <strong>장기렌트 번호판(하, 허, 호) 사용이 전면 불허</strong>됩니다. 즉, 시중의 메이저 장기렌트카 앱이나 어플을 통하더라도 1톤 트럭만큼은 임대 방식이 아닌 <strong>오토리스(이용자 명의 혹은 리스사 명의 리스)</strong> 형태로만 계약 체결 및 출고가 가능합니다.</p>
+            <p>오토리스 계약을 체결하면 일반 승용 번호판을 달고 정상 운행할 수 있으며, 연간 납입료 전체를 손쉽게 필요경비로 상계 처리하여 종합소득세 절세 혜택을 챙길 수 있습니다. 또한, 가입 시 주거래 은행이나 대형 리스 금융사의 다이렉트 온라인 성지 비교 사이트를 통하면 복잡한 중개수수료 거품이 걷힌 제일 저렴한곳 혹은 가장 싼곳을 단번에 연결하여 최저가 견적 상담을 완료할 수 있습니다.</p>
+
+            <h3>6.2. 간이과세자와 일반과세자의 세무 지원금 차이</h3>
+            <p>포터2 LPG 혹은 전기차를 사업자 명의로 구입하는 과정에서 일반과세자 사업자등록증을 소지하고 있다면, 차량 구입 가격에 포함된 10%의 부가세 환급 혜택을 다이렉트로 돌려받을 수 있습니다. 이는 약 200만 원 이상의 실제 구매 금액 세이브가 발생하는 막강한 절세 방법입니다. 그러나 안타깝게도 간이과세자는 세법 규정상 부가세 매입세액 공제 및 환급 대상에서 제외되므로, 차량 획득비 요금제 계산기를 두드릴 때 세무 상담 및 컨설팅을 미리 받아보시는 편이 오차를 줄이는 지름길입니다.</p>
+        </section>
+
+        <section>
+            <h2>7. 자동차 온라인 커뮤니티 실제 오너들의 가감 없는 내돈내산 후기</h2>
+            <p>각종 자동차 전문 동호회와 인터넷 커뮤니티인 디시인사이드(디시), 보배드림, 에펨코리아(펨코) 자영업 정보 교류망을 정기적으로 수집하고 분석한 실제 오너들의 기술적, 감성적 사용 평판을 가감 없이 공유합니다.</p>
+            
+            <h3>7.1. 디시인사이드 자영업 갤러리 후기 분석</h3>
+            <p>디시인사이드 유저들은 가성비와 실리를 중시하며 가차 없는 비판 의견을 쏟아내는 특징이 있습니다. 이곳에서 자주 회자되는 포터2 LPG에 관한 내돈내산 평판에 따르면 가속 페달을 살짝만 밟아도 반응이 매우 날카롭고 부드러워 시내 주행 시 피로가 아주 적어졌다는 찬사가 대수입니다. 하지만 LPG 연료 특성상 가스 충전 주기가 디젤 대비 잦아져 하루 주행거리가 300km를 초과하는 하드 워커들에게는 고속도로 주유소 경유 대비 빈번한 충전 행동이 사소한 단점으로 거론됩니다.</p>
+            
+            <h3>7.2. 보배드림 국산차 게시판 전문 분석</h3>
+            <p>화물 업종에 정통한 베테랑들이 다수 포진한 보배드림에서는 적재 중량을 극도로 채웠을 때의 샤시 내구성과 변속 성능에 무게를 두고 활발한 전문 분석을 펼치고 있습니다. 2026년형 LPG 수동변속기 결합 모델의 완성도는 이미 최고 조에 도달했으나, 자동변속기를 기용한 트림의 경우 과거 4단 변속기 시절보다 진일보한 5단 토크컨버터 시스템이 적용되어 가속 안정감이 개선되었다는 평이 주류입니다. 더불어 일렉트릭 트럭의 압도적인 조용함과 시동 초기 최대 토크 유지는 격한 언덕길 등판에서 우위를 보인다는 찬사를 받습니다. 다만 기온이 섭씨 영하 10도 이하로 곤두박질치는 엄동설한 겨울철에는 전기 배터리 충전 수용량이 평균 대비 20%에서 30%가량 감쇄되는 전비 저하 후기가 다수 보고되어, 일일 운행 동선 내에 신속한 급속 충전소 좌표를 사전에 파악해 두는 노하우가 필수라는 점을 상기시킵니다.</p>
+
+            <h3>7.3. 에펨코리아(펨코) 금융 및 IT 탭 실시간 담론</h3>
+            <p>에펨코리아 회원들은 주로 핀테크 플랫폼과 디지털 수집 체계를 활용한 스마트 계약 노하우를 가장 많이 배포하고 있습니다. 네이버 페이, 토스, 카카오톡 등 대형 금융사 앱의 한도 조회 메뉴나 전문 대행 에이전트 어플을 교차 사용하여 최저금리 이율 순위를 연산해 내고, 신차 계약 단계에서 특전으로 선사하는 주유 상품권 사은품, 블랙박스 무료 시공, 썬팅 무상 가입 프로모션 이벤트 혜택을 챙긴 다이렉트 거래 성지 좌표 인증 글이 꾸준한 호응을 이끌어내고 있습니다.</p>
+        </section>
+
+        <section>
+            <h2>8. AI 검색 혁명 시대의 디지털 견적 및 비대면 가입 전략</h2>
+            <p>과거 오프라인 영맨과의 불투명한 대면 흥정이나 주먹구구식 서비스 매칭 시대는 종식되었습니다. 2026년 현재 고도화된 챗지피티(ChatGPT), 제미나이(Gemini) 등의 첨단 인공지능과 대형 금융 비교 서비스 기술의 결합으로 사업자들은 사무실 책상에 앉아 손가락 클릭 몇 번으로 전국에 퍼진 최저가 리스 요금제를 실시간 도출하고 있습니다.</p>
+            <p>AI 엔진을 통해 내 비즈니스의 월 운행 키로수, 적재 하중 형태, 세무 신고 우회 방향을 한 번에 설명하고 맞춤 추천 자문을 구하면 복잡한 약관과 옵션을 해석하느라 낭비하는 골치 아픈 시간을 크게 절약해 줍니다. 텔레그램 뉴스 알림이나 트위터, 인스타그램, 페이스북의 즉시 출고 특판 리스트를 모니터링하여 가동률 높은 화물차를 남들보다 저렴하고 빠르게 영입하는 성공 공식을 완성할 시기입니다.</p>
+        </section>
+
+        <section>
+            <h2>9. 공인된 신뢰성 있는 공식 정보 출처</h2>
+            <p>포터2 가격, 옵션 세부 카탈로그, 그리고 정부의 화물 수송 분야 보조금 예산 변동성은 다음의 투명한 공식 공공 기관 포털 및 검증된 정보망을 통해 정확하게 크로스체킹하실 수 있습니다. 사설 브로커의 무단 수수료 편취를 피하도록 항상 검증된 경로를 이용하시길 당부드립니다.</p>
+            
+            <div class="link-container">
+                <a href="https://directrcheckz.koreahankang.com" target="_blank" class="link-item">포터2 공식 다이렉트 견적 및 자금 컨설팅 지원 센터 (reliabledone 서브도메인 신뢰 본부)</a>
+                <a href="https://namu.wiki/w/%ED%98%84%EB%8C%80%20%ED%8F%AC%ED%84%B0" target="_blank" class="link-item">나무위키 – 포터 역사, 디젤 디젤엔진 단종 및 LPG 파워트레인 계보</a>
+                <a href="https://www.hyundai.com/kr/ko/e/vehicles/porter2/intro" target="_blank" class="link-item">현대자동차 공식 홈페이지 – 2026년형 포터2 사양 조회 및 전용 카탈로그 서비스</a>
+            </div>
+        </section>
     </main>
-  </body>
-</html>
+
+  
+
+    <script>
+        // Set initial configuration on load
+        window.onload = function() {
+            updateCalculator();
+        };
+
+        function updateCalculator() {
+            const fuelType = document.getElementById('fuelType').value;
+            const trimSelect = document.getElementById('trim');
+            const driveTypeSelect = document.getElementById('driveType');
+            const transSelect = document.getElementById('transmission');
+            const subsidyGroup = document.getElementById('subsidyGroup');
+            
+            if (fuelType === 'EV') {
+                // EV Trims Setup
+                trimSelect.innerHTML = `
+                    <option value="style_special" data-price="43500000">스타일 스페셜 (4,350만 원)</option>
+                    <option value="smart_special" data-price="44850000">스마트 스페셜 (4,485만 원)</option>
+                    <option value="premium_special" data-price="46450000">프리미엄 스페셜 (4,645만 원)</option>
+                `;
+                // EV Restrictions
+                driveTypeSelect.value = '2WD';
+                driveTypeSelect.disabled = true;
+                transSelect.value = 'AT';
+                transSelect.disabled = true;
+                // Show Subsidy Region UI
+                subsidyGroup.style.display = 'block';
+            } else {
+                // LPG Trims Setup
+                trimSelect.innerHTML = `
+                    <option value="smart" data-price="21520000">스마트 (2,152만 원)</option>
+                    <option value="modern" data-price="22570000">모던 (2,257만 원)</option>
+                    <option value="premium" data-price="23800000">프리미엄 (2,380만 원)</option>
+                `;
+                driveTypeSelect.disabled = false;
+                transSelect.disabled = false;
+                // Hide Subsidy Region UI
+                subsidyGroup.style.display = 'none';
+            }
+            
+            calculatePrice();
+        }
+
+        function calculatePrice() {
+            const fuelType = document.getElementById('fuelType').value;
+            const trimOption = document.getElementById('trim').options[document.getElementById('trim').selectedIndex];
+            if (!trimOption) return;
+            
+            let basePrice = parseInt(trimOption.getAttribute('data-price')) || 0;
+            let optionCost = 0;
+            let subsidy = 0;
+            
+            // 1. Cab Type Adjustment
+            const cabType = document.getElementById('cabType').value;
+            if (cabType === 'double') {
+                basePrice += 1250000;
+            } else if (cabType === 'general') {
+                basePrice -= 100000;
+            }
+            
+            // 2. Drive Type & Transmission Cost (LPG only)
+            const driveType = document.getElementById('driveType').value;
+            const trans = document.getElementById('transmission').value;
+            
+            if (fuelType === 'LPG') {
+                if (driveType === '4WD') {
+                    basePrice += 2000000;
+                    // PTO can only be selected for manual transmisson
+                }
+                if (trans === 'AT') {
+                    basePrice += 1130000;
+                }
+            }
+            
+            // 3. Option Handlers
+            const trimValue = document.getElementById('trim').value;
+            const navChecked = document.getElementById('optNav').checked;
+            const ptoChecked = document.getElementById('optPto').checked;
+            const springChecked = document.getElementById('optSpring').checked;
+            const coverChecked = document.getElementById('optCover').checked;
+            
+            // PTO is only eligible on LPG Manual transmissions
+            const ptoLabel = document.getElementById('ptoLabel');
+            if (fuelType === 'LPG' && trans === 'MT') {
+                document.getElementById('optPto').disabled = false;
+                ptoLabel.style.opacity = '1';
+            } else {
+                document.getElementById('optPto').disabled = true;
+                document.getElementById('optPto').checked = false;
+                ptoLabel.style.opacity = '0.5';
+            }
+            
+            // Handle Navigation pricing. Free in Premium trims
+            const isPremiumClass = (trimValue === 'premium' || trimValue === 'premium_special');
+            const navLabel = document.getElementById('navLabel');
+            if (isPremiumClass) {
+                document.getElementById('optNav').checked = true;
+                document.getElementById('optNav').disabled = true;
+                navLabel.style.opacity = '0.7';
+            } else {
+                document.getElementById('optNav').disabled = false;
+                navLabel.style.opacity = '1';
+            }
+            
+            // Add Option Prices
+            if (navChecked && !isPremiumClass) {
+                optionCost += 1500000;
+            }
+            if (document.getElementById('optPto').checked && !document.getElementById('optPto').disabled) {
+                optionCost += 200000;
+            }
+            if (springChecked) {
+                optionCost += 60000;
+            }
+            if (coverChecked) {
+                optionCost += 630000;
+            }
+            
+            // 4. Subsidy Logic (EV only)
+            if (fuelType === 'EV') {
+                const nationalSubsidy = 9680000;
+                let regionalSubsidy = 0;
+                const region = document.getElementById('subsidyRegion').value;
+                
+                if (region === 'seoul') regionalSubsidy = 3400000;
+                else if (region === 'busan') regionalSubsidy = 3200000;
+                else if (region === 'jeju') regionalSubsidy = 4600000;
+                else if (region === 'other_met') regionalSubsidy = 2900000;
+                else if (region === 'other_prov') regionalSubsidy = 2000000;
+                
+                subsidy = nationalSubsidy + regionalSubsidy;
+            }
+            
+            const totalVehicleCost = basePrice + optionCost;
+            
+            // 5. Taxes (5% for Commercial trucks)
+            let tax = Math.round(totalVehicleCost * 0.05);
+            if (fuelType === 'EV') {
+                // EV Tax reduction up to 1.4 million KRW
+                tax = Math.max(0, tax - 1400000);
+            }
+            
+            const taksong = 250000; // Average delivery charge
+            const administrativeFee = 90000; // registration etc.
+            
+            const finalOnTheRoadPrice = totalVehicleCost - subsidy + tax + taksong + administrativeFee;
+            
+            // 6. Output Assignment
+            document.getElementById('resBasePrice').innerText = basePrice.toLocaleString() + ' 원';
+            document.getElementById('resOptionCost').innerText = optionCost.toLocaleString() + ' 원';
+            document.getElementById('resSubsidy').innerText = subsidy > 0 ? '-' + subsidy.toLocaleString() + ' 원' : '0 원';
+            document.getElementById('resTax').innerText = tax.toLocaleString() + ' 원';
+            document.getElementById('resFinal').innerText = finalOnTheRoadPrice.toLocaleString() + ' 원';
+            
+            // 7. Finance Calculation
+            const term = parseInt(document.getElementById('financeTerm').value) || 36;
+            const annualRate = 0.055; // 5.5% APR
+            const monthlyRate = annualRate / 12;
+            let monthlyInstallment = 0;
+            
+            if (finalOnTheRoadPrice > 0) {
+                monthlyInstallment = Math.round((finalOnTheRoadPrice * monthlyRate * Math.pow(1 + monthlyRate, term)) / (Math.pow(1 + monthlyRate, term) - 1));
+            }
+            
+            document.getElementById('resMonthly').innerText = monthlyInstallment.toLocaleString() + ' 원';
+        }
+    </script>
+  
